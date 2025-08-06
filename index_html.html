@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bói Bài Tây - Khám Phá Tương Lai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔮 Bói Bài Tây</h1>
+            <p>Khám phá những điều thú vị về tương lai qua lá bài định mệnh của bạn</p>
+        </div>
+
+        <div class="card-section">
+            <div id="startSection">
+                <h2 style="margin-bottom: 20px; color: #667eea;">Sẵn sàng khám phá tương lai?</h2>
+                <p style="margin-bottom: 30px; color: #666; font-size: 1.1em;">
+                    Nhấn nút bên dưới để bắt đầu hành trình bói bài. Vũ trụ sẽ chọn cho bạn một lá bài định mệnh!
+                </p>
+                <button class="start-btn" onclick="startReading()">🎴 Bắt Đầu Bói Bài</button>
+            </div>
+
+            <div class="loading" id="loadingSection">
+                <div class="spinner"></div>
+                <p style="color: #667eea; font-size: 1.2em;">Đang kết nối với vũ trụ...</p>
+                <p style="color: #999; margin-top: 10px;">Vui lòng chờ trong giây lát</p>
+            </div>
+
+            <div class="result" id="resultSection">
+                <div class="card-name" id="cardName"></div>
+                
+                <div class="overview">
+                    <h3>📋 Tổng Quan</h3>
+                    <p id="overviewText"></p>
+                </div>
+
+                <div class="details">
+                    <h3>🔍 Chi Tiết</h3>
+                    
+                    <div class="detail-item love">
+                        <h4>💖 Tình Cảm</h4>
+                        <p id="loveText"></p>
+                    </div>
+
+                    <div class="detail-item work">
+                        <h4>💼 Công Việc</h4>
+                        <p id="workText"></p>
+                    </div>
+
+                    <div class="detail-item family">
+                        <h4>👨‍👩‍👧‍👦 Gia Đình</h4>
+                        <p id="familyText"></p>
+                    </div>
+                </div>
+
+                <div class="conclusion">
+                    <h3>✨ Kết Luận</h3>
+                    <p id="conclusionText"></p>
+                </div>
+
+                <div style="text-align: center;">
+                    <button class="new-reading-btn" onclick="resetReading()">🔄 Bói Lại</button>
+                </div>
+            </div>
+
+            <div class="error" id="errorSection" style="display: none;">
+                <h3>⚠️ Có lỗi xảy ra</h3>
+                <p id="errorText">Không thể kết nối với server. Vui lòng thử lại sau.</p>
+                <button class="new-reading-btn" onclick="resetReading()" style="margin-top: 15px;">🔄 Thử Lại</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
